@@ -1,0 +1,206 @@
+export type Language = 'en' | 'es';
+
+export interface Stage {
+  id: string;
+  name: string;
+  description: string;
+  defaultText: string;
+}
+
+export const EN_STAGES: Stage[] = [
+  {
+    id: 'common',
+    name: 'Common Words',
+    description: 'Basic vocabulary and high-frequency words.',
+    defaultText: 'The sky is blue and the sun is bright.'
+  },
+  {
+    id: 'complex',
+    name: 'Complex Words',
+    description: 'Advanced vocabulary and multi-syllabic words.',
+    defaultText: 'Extraordinary circumstances require immediate attention and sophisticated solutions.'
+  },
+  {
+    id: 'story',
+    name: 'Children\'s Story',
+    description: 'Connected text and narrative flow.',
+    defaultText: 'Once upon a time, there was a small cat who loved to climb fences and chase butterflies in the garden.'
+  }
+];
+
+export const ES_STAGES: Stage[] = [
+  {
+    id: 'common',
+    name: 'Palabras Comunes',
+    description: 'Vocabulario básico y palabras de alta frecuencia.',
+    defaultText: 'El cielo es azul y el sol brilla.'
+  },
+  {
+    id: 'complex',
+    name: 'Palabras Complejas',
+    description: 'Vocabulario avanzado y palabras de varias sílabas.',
+    defaultText: 'Las circunstancias extraordinarias requieren atención inmediata y soluciones sofisticadas.'
+  },
+  {
+    id: 'story',
+    name: 'Cuento Infantil',
+    description: 'Texto conectado y flujo narrativo dentro de la historia.',
+    defaultText: 'Había una vez un pequeño gato al que le encantaba trepar por las vallas y perseguir mariposas en el jardín.'
+  }
+];
+
+const translations: Record<string, string> = {
+  // Common terms
+  "Painel de Gestão Educacional": "Panel de Gestión Educativa",
+  "LITERACY INTERVENTION & READING ASSESSMENT": "INTERVENCIÓN DE ALFABETIZACIÓN Y EVALUACIÓN DE LECTURA",
+  "Sistema de Acompanhamento de Aprendizagem": "Sistema de Seguimiento de Aprendizaje",
+  "LIRA Voice AI — Bilingual Reading Fluency": "LIRA Voice AI — Fluidez de Lectura Bilingüe",
+  "Gestão Escolar": "Gestión Escolar",
+  "Simulado:": "Simulado:",
+  "Relatório Geral": "Reporte General",
+  "Buscar aluno...": "Buscar alumno...",
+  "Nova Turma": "Nueva Clase",
+  "Turmas": "Clases",
+  "Evolução": "Evolución",
+  "Bolsa Família": "Bolsa Familia",
+  "Indicador Socioeconômico": "Indicador Socioeconómico",
+  "Neurodivergente": "Neurodivergente",
+  "Nec. Educacionais Especiais": "Nec. Educacionales Especiales",
+  "Cor/Etnia": "Color/Etnia",
+  "Preto, Pardo, Indígena": "Negro, Pardo, Indígena",
+  "Branco, Amarelo": "Blanco, Amarillo",
+  "Nome da Nova Turma": "Nombre de la Nueva Clase",
+  "Confirmar": "Confirmar",
+  "Cancelar": "Cancelar",
+  "Turma Vulnerável": "Clase Vulnerable",
+  "Relatório": "Reporte",
+  "Excluir Turma": "Eliminar Clase",
+  "Estudantes": "Estudiantes",
+  "Ficha do Aluno": "Ficha del Alumno",
+  "Evolução Temporal": "Evolución Temporal",
+  "Histórico de Avaliações": "Historial de Evaluaciones",
+  "Avaliar": "Evaluar",
+  "Avaliando": "Evaluando...",
+  "Resultado da Avaliação": "Resultado de la Evaluación",
+  "Transcrição Completa": "Transcripción Completa",
+  "Análise por Palavra": "Análisis por Palabra",
+  "Resumo de Erros": "Resumen de Errores",
+  "Total Palavras": "Total Palabras",
+  "Palavras Corretas": "Palabras Correctas",
+  "Palavras Erradas": "Palabras Erradas",
+  "Dificuldade": "Dificultad",
+  "Fluência": "Fluidez",
+  "Detector de Palavras": "Detector de Palabras",
+  "Status": "Estado",
+  "Palavra": "Palabra",
+  "NÃO AVALIADO": "NO EVALUADO",
+  "FLUENT": "FLUIDO",
+  "TRANSITIONAL": "TRANSICIONAL",
+  "EMERGENT": "EMERGENTE",
+  "PRE-READER": "PRELECTOR",
+  "Atenção": "Atención",
+  "ATENÇÃO": "ATENCIÓN",
+  "Condicionalidade 3 - VAAR": "Condicionalidad 3 - VAAR",
+  "Detectada disparidade significativa entre os resultados raciais na turma": "Se detectó una disparidad significativa entre los resultados raciales en el grupo",
+  "Concentração desproporcional de estudantes PPI em níveis pré-leitores detectada nesta turma.": "Concentración desproporcional de estudiantes PPI en niveles prelectores detectada en esta clase.",
+  "Grupo PPI": "Grupo PPI",
+  "Grupo BA": "Grupo BA",
+  "EX: 3° ANO C": "EJ: 3º GRADO C",
+  "Evolução Temporal (Simulados)": "Evolución Temporal (Simulados)",
+  "LIRA - Avaliar Aluno": "LIRA - Evaluar Alumno",
+  "NeuroSpot - Detector de Palavras": "NeuroSpot - Detector de Palabras",
+  "Módulos": "Módulos",
+  "Voltar para Gestão": "Volver a Gestión",
+  "EVALUATION": "EVALUACIÓN",
+  "MANAGEMENT": "GESTIÓN",
+  "Estudante": "Estudiante",
+  "Nível Escolhido": "Nivel Seleccionado",
+  "Etapa": "Etapa",
+  "Texto de referência a ser lido:": "Texto de referencia a leer:",
+  "Gravador de Áudio": "Grabador de Audio",
+  "Gravar": "Grabar",
+  "Parar": "Detener",
+  "Limpar": "Limpiar",
+  "Avaliar Leitura": "Evaluar Lectura",
+  "O modelo AI não retornou resposta": "El modelo AI no devolvió respuesta.",
+  "Processando gravação com Gemini 1.5 Flash...": "Procesando grabación con Gemini 1.5 Flash...",
+  "Resultados Individuais da Etapa": "Resultados Individuales de la Etapa",
+  "Fim do Ciclo de Avaliação": "Fin del Ciclo de Evaluación",
+  "Ver Resultado Final": "Ver Resultado Final",
+  "Próxima Etapa": "Siguiente Etapa",
+  "Etapa Anterior": "Etapa Anterior",
+  "Limpar Tudo & Recomeçar": "Limpiar Todo y Reiniciar",
+  "Voltar": "Volver",
+  "Adicionar Aluno": "Añadir Alumno",
+  "Nome Completo": "Nombre Completo",
+  "Ficha de": "Ficha de",
+  "Módulo LIRA (Avaliador de Proficiência)": "Módulo LIRA (Evaluador de Proficiencia)",
+  "Módulo NeuroSpot (Detector de Palavras)": "Módulo NeuroSpot (Detector de Palabras)",
+  "Palavras-alvo selecionadas para detecção": "Palabras clave seleccionadas para detección",
+  "Palavras-Alvo Predefinidas": "Palabras Clave Predefinidas",
+  "Palavras customizadas adicionadas": "Palabras personalizadas añadidas",
+  "Adicionar Palavra Customizada": "Añadir Palabra Personalizada",
+  "Status do Áudio": "Estado del Audio",
+  "Resultado da Detecção": "Resultado de la Detección",
+  "Nenhuma palavra-alvo detectada de forma confiável ainda.": "Aún no se ha detectado ninguna palabra clave con suficiente confianza.",
+  "Palavras Detectadas no Áudio": "Palabras Detectadas en el Audio",
+  "Confiança": "Confianza",
+  "Observações Adicionais": "Observaciones Adicionales",
+  "Ciclo 1": "Ciclo 1",
+  "Ciclo 2": "Ciclo 2",
+  "Ciclo 3": "Ciclo 3",
+  "Ciclo 4": "Ciclo 4",
+  "Simulado 1": "Simulado 1",
+  "Simulado 2": "Simulado 2",
+  "Simulado 3": "Simulado 3",
+  "Simulado 4": "Simulado 4",
+  "Apenas alunos de 2º Ano possuem simulados de acompanhamento.": "Solo los estudiantes de 2º Ano tienen simulados de seguimiento.",
+  "Estatísticas Gerais da Turma": "Estadísticas Generales del Grupo",
+  "Média Geral de Fluência": "Media General de Fluidez",
+  "Dispersão por Nível de Leitura": "Dispersión por Nivel de Lectura",
+  "Estudante vulnerável com condicionalidade de Bolsa Família ativo.": "Estudiante vulnerable con condicionalidad de Bolsa Familia activo.",
+  "Necessidades Educacionais Especiais ativas para este estudante.": "Necesidades Educacionales Especiales activas para este estudiante.",
+  "Indicador de Raça/Cor autodeclarado pelo estudante.": "Indicador de Raza/Color autodeclarado por el estudiante.",
+  "Histórico de Pontuação de Fluência": "Historial de Puntuaciones de Fluidez",
+  "Último Simulado Gravado": "Último Simulado Grabado",
+  "Iniciar Ciclo LIRA": "Iniciar Ciclo LIRA",
+  "Iniciar NeuroSpot": "Iniciar NeuroSpot",
+  "Excluir Aluno de Vez": "Eliminar Alumno Definitivamente",
+  "Desfazer": "Deshacer",
+  "Você tem certeza que deseja deletar permanentemente o registro de": "¿Está seguro de que desea eliminar permanentemente el registro de",
+  "Esta ação é irreversível.": "Esta acción es irreversible.",
+  "Dificuldade de Leitura": "Dificultad de Lectura",
+  "Acertos": "Aciertos",
+  "Erros por Categoria": "Errores por Categoría",
+  "Substituições": "Sustituciones",
+  "Omissões": "Omisiones",
+  "Inserções": "Inserciones",
+  "Variação de Pronúncia": "Variación de Pronuncia",
+  "Desempenho Geral": "Rendimiento General",
+  "Relatório Individual de Fluência de Leitura": "Reporte Individual de Fluidez de Lectura",
+  "Relatório consolidado para os ciclos avaliativos LIRA.": "Reporte consolidado para los ciclos evaluativos LIRA.",
+  "DETALHAMENTO DA AVALIAÇÃO DE VOZ POR ETAPA": "DETALLE DE LA EVALUACIÓN DE VOZ POR ETAPA",
+  "Resumo consolidado do desempenho e necessidades especiales da turma.": "Resumen consolidado del rendimiento y necesidades especiales de la clase.",
+  "RESUMO DA TURMA": "RESUMEN DE LA CLASE",
+  "Média da Turma": "Media de la Clase",
+  "DISTRIBUIÇÃO DE APRENDIZAGEM": "DISTRIBUCIÓN DE APRENDIZAJE",
+  "ESTUDANTES VULNERÁVEIS": "ESTUDIANTES VULNERABLES",
+  "DISPARIDADE VAAR DETECTADA": "DISPARIDAD VAAR DETECTADA",
+  "Nenhuma disparidade crítica detectada entre os grupos de raça/cor nesta turma.": "No se detectó ninguna disparidad crítica entre los grupos de raza/color en esta clase.",
+  "Exportar PDF": "Exportar PDF",
+  "Fechar": "Cerrar",
+  "Idioma": "Idioma",
+  "Selecione o Idioma do Sistema": "Seleccione el Idioma del Sistema",
+  "Inglês": "Inglés",
+  "Espanhol": "Español",
+  "Alterar Idioma": "Cambiar Idioma",
+  "Boas-vindas": "Bienvenido",
+  "Sair": "Cerrar Sesión"
+};
+
+export const t = (text: string, lang: Language): string => {
+  if (lang === 'en') {
+    return text;
+  }
+  return translations[text] || text;
+};

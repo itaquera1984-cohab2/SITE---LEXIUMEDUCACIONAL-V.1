@@ -254,8 +254,10 @@ attachApiRoute("get", "/health", healthHandler);
 
 const debugHandler = (req: any, res: any) => {
   res.json({
-    geminiKeyPresent: Boolean(process.env.GEMINI_API_KEY?.trim()),
-    envKeys: Object.keys(process.env).filter(k => /gemini|genai|google/i.test(k)),
+    geminiKeyPresent: Boolean(
+      process.env.GEMINI_API_KEY?.trim() || process.env.lexiumbilingue?.trim()
+    ),
+    envKeys: Object.keys(process.env).filter(k => /gemini|genai|google|lexiumbilingue/i.test(k)),
     nodeVersion: process.version,
     runtime: process.env.VERCEL ? 'vercel' : 'local',
   });
